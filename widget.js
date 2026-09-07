@@ -80,7 +80,7 @@
       const card = document.createElement('div');
       card.className = 'conversation-card';
       card.innerHTML = `
-        <img class="avatar" src="./assets/10alytics-logo.png" alt="10Alytics" />
+        <img class="avatar" src="./10alytics-logo.png" alt="10Alytics" />
         <div class="summary">
           <strong>Started ${escapeHtml(conv.startedLabel || '')}</strong>
           <p>${escapeHtml(conv.preview || '10Alytics Support conversation')}</p>
@@ -106,7 +106,7 @@
     if (msg.role !== 'user') {
       const avatar = document.createElement('img');
       avatar.className = 'message-avatar';
-      avatar.src = './assets/10alytics-logo.png';
+      avatar.src = './10alytics-logo.png';
       avatar.alt = '10Alytics';
       row.appendChild(avatar);
     }
