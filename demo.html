@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10Alytics Support Widget Demo</title>
+  <style>
+    body { margin: 0; min-height: 100vh; font-family: Arial, sans-serif; background: #f4f5f7; color: #1c1c1c; }
+    .demo { max-width: 900px; margin: 0 auto; padding: 70px 24px; }
+    h1 { font-size: 34px; margin: 0 0 12px; }
+    p { color: #5b6472; line-height: 1.6; max-width: 700px; }
+    .card { margin-top: 28px; padding: 24px; background: #fff; border-radius: 16px; box-shadow: 0 12px 28px rgba(0,0,0,.08); }
+    code { background: #f3f4f6; padding: 2px 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <h1>10Alytics Support Widget</h1>
+    <p>This page demonstrates the embeddable support widget. Click the orange support button in the lower-right corner.</p>
+    <div class="card">
+      <strong>Demo mode</strong>
+      <p>No API URL is set on this page. The widget will show a placeholder response until you add the n8n webhook URL.</p>
+    </div>
+  </div>
+
+  <script>
+    window.TenAlyticsSupportConfig = {
+      widgetUrl: './index.html',
+      apiUrl: 'https://https://primary-production-2d1ace.up.railway.app/webhook/support-chat',
+      accentColor: '#DA6727',
+      position: 'right'
+    };
+  </script>
+  <script src="./widget-loader.js"></script>
+</body>
+</html>
