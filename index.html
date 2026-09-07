@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>10Alytics Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./widget.css" />
+</head>
+<body>
+  <main class="widget-shell" id="widgetShell" aria-label="10Alytics Support">
+    <header class="widget-header">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="./assets/10alytics-logo.png" alt="10Alytics" />
+        <div>
+          <div class="brand-title">10Alytics Support</div>
+          <div class="brand-status"><span class="status-dot"></span>Online</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="menuButton" aria-label="More options" title="More options">⋮</button>
+    </header>
+
+    <section class="screen history-screen" id="historyScreen">
+      <div class="conversation-list" id="conversationList"></div>
+      <div class="history-empty" id="historyEmpty">
+        <div class="empty-logo-wrap">
+          <img src="./assets/10alytics-logo.png" alt="" />
+        </div>
+        <h2>How can we help?</h2>
+        <p>Start a conversation with the 10Alytics Support Assistant.</p>
+      </div>
+
+      <div class="history-footer">
+        <button class="primary-btn" id="newConversationButton">New conversation</button>
+        <div class="powered-by">
+          <span class="powered-mark">10A</span>
+          <span>Powered by 10Alytics</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen chat-screen hidden" id="chatScreen">
+      <div class="chat-subheader">
+        <button class="back-btn" id="backButton" aria-label="Back to conversations">‹</button>
+        <div>
+          <div class="chat-title">Support Assistant</div>
+          <div class="chat-subtitle" id="chatSubtitle">Typically replies instantly</div>
+        </div>
+      </div>
+
+      <div class="messages" id="messages" aria-live="polite"></div>
+
+      <div class="typing-row hidden" id="typingRow" aria-live="polite">
+        <img class="typing-avatar" src="./assets/10alytics-logo.png" alt="" />
+        <div class="typing-bubble" aria-label="Assistant is typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="escalation-banner hidden" id="escalationBanner">
+        This conversation has been passed to the support team.
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea id="messageInput" rows="1" maxlength="3000" placeholder="Type your message..." aria-label="Type your message"></textarea>
+        <button class="send-btn" id="sendButton" type="submit" aria-label="Send message">➤</button>
+      </form>
+    </section>
+
+    <div class="menu-popover hidden" id="menuPopover">
+      <button id="menuNewConversation">Start new conversation</button>
+      <button id="menuClearHistory">Clear local history</button>
+    </div>
+  </main>
+
+  <script src="./widget.js"></script>
+</body>
+</html>
